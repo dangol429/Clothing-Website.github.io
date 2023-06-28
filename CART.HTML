@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="navbarr">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" width="50px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="allproducts.html">All Products</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Women
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="allproducts.html">All Products</a>
+                            <a class="dropdown-item" href="#">Dresses</a>
+                            <a class="dropdown-item" href="#">Pants</a>
+                            <a class="dropdown-item" href="#">Skirts</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Men
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="allproducts.html">All Products</a>
+                            <a class="dropdown-item" href="#">Shirts</a>
+                            <a class="dropdown-item" href="#">Pants</a>
+                            <a class="dropdown-item" href="#">Hoodies</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kids</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact</a>
+                    </li>
+                </ul>
+                <a href="login.html">
+                    <button class="btn btn-outline-light my-2 mx-4 my-sm-0" type="submit">Login</button>
+                </a>
+                <a href="CART.HTML">
+                    <img src="cart.png" width="50px" alt="cart">
+                </a>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header text-xxl-center" style="font-size: 40px; font-family: 'Courier New';">
+                            Items In Cart</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="dresses/dress12.webp" alt="Product Image" class="img-fluid">
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>Chainsaw Man T-shirt</h5>
+                                    <p id="price">₹599</p>
+                                    <button class="btn btn-outline-danger"><img src="delete.png" width="20px"></button>
+                                </div>
+                                <div class="col-md-4">
+                                    <form>
+                                        <div class="input-group">
+                                            <span class="input-group-btn mr-3">
+                                                <button class="btn btn-outline-info" type="button"
+                                                    onclick="decrementValue()">-</button>
+                                            </span>
+                                            <input type="number" id="quantity" class="form-control" value="1">
+                                            <span class="input-group-btn ml-3">
+                                                <button class="btn btn-outline-info" type="button"
+                                                    onclick="incrementValue()">+</button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="text-center">Price</h2>
+                        </div>
+                        <div class="card-body">
+                            <p>Cost: <span id="cost">₹599</span></p>
+                            <p>Shipping: <span id="shipping">₹50</span></p>
+                            <hr>
+                            <p><strong>Total: <span class="text-end" id="totalCost"></span></strong></p>
+                            <button class=" btn btn-success btn-block" onclick="totalCost()">Checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="footer">
+        <div class="box-container">
+            <div class="box mx-3">
+                <h3>Women</h3>
+                <a href="#">Dresses</a>
+                <a href="#">Pants</a>
+                <a href="#">Skirts</a>
+            </div>
+
+            <div class="box mx-3">
+                <h3>Men</h3>
+                <a href="#">Shirts</a>
+                <a href="#">Pants</a>
+                <a href="#">Hoodies</a>
+            </div>
+            <div class="box">
+                <h3>Links</h3>
+                <a href="index.html">Home</a>
+                <a href="contactus.html">Contact</a>
+                <a href="login.html">Login</a>
+            </div>
+        </div>
+        <div class="credit">created by <span>Pratham Dangol</span> | all rights reserved!</div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+
+    <!-- JavaScript code down below-->
+
+    <script>
+        function incrementValue() {
+            var value = parseInt(document.getElementById('quantity').value);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            document.getElementById('quantity').value = value;
+        }
+
+        function decrementValue() {
+            var value = parseInt(document.getElementById('quantity').value);
+            value = isNaN(value) ? 0 : value;
+            if (value > 0) {
+                value--;
+                document.getElementById('quantity').value = value;
+            }
+        }
+        function totalCost() {
+            var quantity = parseInt(document.getElementById('quantity').value);
+            var cost = parseInt(document.getElementById('price').innerHTML.replace('₹', ''));
+            var ship = parseInt(document.getElementById('shipping').innerHTML.replace('₹', ''));
+            var total = (cost * quantity) + ship;
+            document.getElementById('totalCost').innerHTML = '₹' + total;
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

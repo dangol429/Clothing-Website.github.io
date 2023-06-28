@@ -1,0 +1,96 @@
+#logo { 
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    top: 10px
+}
+#LogoDesc{ 
+    text-align: center;
+    position: relative;
+    top:10px;
+    color:white;
+    font-size: 80px;
+    font-family:'Courier New', Courier, monospace;
+}
+#search { 
+    position: relative;
+    display: flex;
+    justify-content:center;
+    bottom: 10px;
+}
+#navbarr{
+    display: sticky;
+}
+#Feature{
+    font-size: 40px;
+    font-family: 'Courier New', Courier;
+}
+ #home{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(background.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  #contact{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(gif.gif) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .footer{
+    background: black;
+  }
+  
+  .footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 150px;
+  }
+  
+  
+  .footer .box-container .box h3 {
+    font-size: 40px;
+    padding: 1.5rem 0;
+    color: #fff;
+  }
+  
+  .footer .box-container .box a {
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    padding: 1rem 0;
+  }
+  
+  .footer .box-container .box a i {
+    color: #219150;
+    padding-right: .5rem;
+  }
+  
+  .footer .box-container .box a:hover {
+    color: #219150;
+  }
+  
+  .footer .box-container .box a:hover i {
+    padding-right: 2rem;
+  }
+  
+  .footer .credit {
+    text-align: center;
+    margin-top: 2.5rem;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: #fff;
+  }
+  
+  .footer .credit span {
+    color: #219150;
+  }
+  #contactform{
+    position: relative;
+    display: grid;
+    justify-content:center;
+    align-items: center;
+  }
